@@ -17,6 +17,7 @@ const App = () => {
   // Expenses state
   const [expenses, setExpenses] = useState([])
   const [username, setUsername] = useState('')
+  const [isLoading, setIsloading] = useState(true)
 
   const fetchUserInfo = async () => {
     const userInfo = await Auth.currentUserInfo()
@@ -35,7 +36,8 @@ const App = () => {
 
   // Fetch expenses from DataStore only for the logged-in username, put into expenses state, all local transaction, offline support
   useEffect(() => {
-    fetchExpenses(username)
+    fetchExpenses(username).then(() => setIsloading(false))
+
     const subscription = DataStore.observe(Expense).subscribe(() =>
       fetchExpenses(username)
     )
@@ -77,6 +79,7 @@ const App = () => {
         DataStore,
         Expense,
         Auth,
+        isLoading,
       }}
     >
       <AmplifyAuthenticator>
