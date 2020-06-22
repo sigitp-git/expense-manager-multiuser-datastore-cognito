@@ -21,12 +21,16 @@ const App = () => {
 
   const fetchUserInfo = async () => {
     const userInfo = await Auth.currentUserInfo()
-    setUsername(userInfo.username)
+    if (!!userInfo) {
+      setUsername(userInfo.username)
+    }
   }
 
   const fetchExpenses = async (usr) => {
     const expensesDS = await DataStore.query(Expense, (e) => e.owner('eq', usr))
-    setExpenses(expensesDS)
+    if (!!expensesDS) {
+      setExpenses(expensesDS)
+    }
   }
 
   // Fetch username from Cognito Auth class
@@ -80,6 +84,7 @@ const App = () => {
         Expense,
         Auth,
         isLoading,
+        username
       }}
     >
       <AmplifyAuthenticator>

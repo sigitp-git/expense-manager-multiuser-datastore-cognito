@@ -49,7 +49,7 @@ const Form = (props) => {
     return () => {
       setStatus('Please add Expense below')
     }
-  }, [props.expense, setStatus])
+  }, []) // use to be: props.expense, setStatus (before subscription to expenses)
 
   // Reusable onFormSubmit(), props.onSubmit passed by Add.js or Edit.js
   const onFormSubmit = (e) => {
@@ -62,9 +62,10 @@ const Form = (props) => {
         note: note,
       })
       setStatus(`Expense ${description} saved!`)
-      setDescription('')
-      setAmount('')
-      setNote('')
+      // commented due to promise return from Edit.js or Add.js
+      // setDescription('')
+      // setAmount('')
+      // setNote('')
     } else {
       setStatus('Description and Amount Required!')
     }

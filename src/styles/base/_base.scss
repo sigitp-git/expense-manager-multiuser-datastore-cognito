@@ -1,6 +1,9 @@
 * {
   // universal selector box-sizing: border-box to avoid margin padding added to css specification of size (like height)
   box-sizing: border-box;
+  --amplify-primary-color: #364051;
+  --amplify-primary-tint: #404c60; 
+  --amplify-primary-shade: #404c60;
 }
 
 html {
