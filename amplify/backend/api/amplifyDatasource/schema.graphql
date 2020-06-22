@@ -1,0 +1,8 @@
+type Expense @model @auth( rules: [ {allow: owner, ownerField: "owner", operations: [create, read, update, delete]} ]) {
+  id: ID!
+  createdAt: Float!
+  description: String!
+  amount: Float!
+  note: String
+  owner: String
+}

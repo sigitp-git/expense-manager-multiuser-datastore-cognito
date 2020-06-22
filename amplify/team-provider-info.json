@@ -1,0 +1,20 @@
+{
+    "expmgrmusr": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-expmgr-datastore-multiuser-expmgrmusr-184644-authRole",
+            "UnauthRoleArn": "arn:aws:iam::989480987093:role/amplify-expmgr-datastore-multiuser-expmgrmusr-184644-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::989480987093:role/amplify-expmgr-datastore-multiuser-expmgrmusr-184644-authRole",
+            "Region": "us-east-1",
+            "DeploymentBucketName": "amplify-expmgr-datastore-multiuser-expmgrmusr-184644-deployment",
+            "UnauthRoleName": "amplify-expmgr-datastore-multiuser-expmgrmusr-184644-unauthRole",
+            "StackName": "amplify-expmgr-datastore-multiuser-expmgrmusr-184644",
+            "StackId": "arn:aws:cloudformation:us-east-1:989480987093:stack/amplify-expmgr-datastore-multiuser-expmgrmusr-184644/782c4250-b419-11ea-848a-120fbf0f0187",
+            "AmplifyAppId": "d35ytjyyrvbhey"
+        },
+        "categories": {
+            "auth": {
+                "expmgrdatastoremultiuserf7b53136": {}
+            }
+        }
+    }
+}
