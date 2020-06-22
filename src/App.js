@@ -8,7 +8,7 @@ import Amplify from '@aws-amplify/core'
 import { DataStore } from '@aws-amplify/datastore'
 import { Expense } from './models'
 import awsConfig from './aws-exports'
-import { AmplifyAuthenticator } from '@aws-amplify/ui-react'
+import { AmplifyAuthenticator, AmplifySignIn } from '@aws-amplify/ui-react'
 import { Auth } from 'aws-amplify'
 
 Amplify.configure(awsConfig)
@@ -84,10 +84,14 @@ const App = () => {
         Expense,
         Auth,
         isLoading,
-        username
+        username,
       }}
     >
       <AmplifyAuthenticator>
+        <div slot='sign-in' style={{ textAlign: 'center' }}>
+          {/* any custom JSX here*/}
+          <AmplifySignIn />
+        </div>
         <AppRouter />
       </AmplifyAuthenticator>
     </Context.Provider>
