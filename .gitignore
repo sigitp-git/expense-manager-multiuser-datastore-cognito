@@ -12,6 +12,7 @@ node_modules/
 aws-exports.js
 src/aws-exports.js
 .savednotes
+.DS_Store
 awsconfiguration.json
 amplifyconfiguration.json
 amplify-build-config.json
