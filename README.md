@@ -5,32 +5,29 @@
 ## Objectives
 
 - Expense Manager with React Hooks: useState, useEffect, useReducer, useContext
-
-- All States managed by React Hooks, no Redux
-
+- All States managed by React Hooks + Amplify DataStore, no Redux
 - States:
     - expenses => Sync expenses state with Amplify DataStore for Offline and Online persistent data
-        - id (ID! on schema.graphql)
-        - date (UNIX Timestamp for sorting, Float! on schema.graphql)
-        - description (String!)
-        - amount (String! => ParseFloat for processing)
-        - note (String)
+      - id (ID! on schema.graphql)
+      - date (UNIX Timestamp for sorting, Float! on schema.graphql)
+      - description (String!)
+      - amount (String! => ParseFloat for processing)
+      - note (String)
     - filters
-        - text, default: ''
-        - sortBy, default: 'date', other option: 'amount'
-        - startDate, default: firstDay
-        - endDate, default: lastDay
+      - text, default: ''
+      - sortBy, default: 'date', other option: 'amount'
+      - startDate, default: firstDay
+      - endDate, default: lastDay
     - status (printing messages to dashboard during CRUD operations)
-    
-        
-    
 - Sync state with Amplify DataStore on initial App mount
-
 - Save state to Amplify DataStore only on dependency-state changes (expenses state)
-
 - Integrate Amplify DataStore
-
 - Offline and Online support with Amplify DataStore
+- Combination of DataStore subscription and useEffect hooks for real-time update of state changes
+
+
+
+
 
 PS: Expense.createdAt is of type Float. To support auto population change the type to AWSDateTime or String
 
