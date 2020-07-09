@@ -27,8 +27,6 @@
 
 
 
-
-
 PS: Expense.createdAt is of type Float. To support auto population change the type to AWSDateTime or String
 
 ## 💫 Deploy to AWS Amplify
